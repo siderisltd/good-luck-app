@@ -8,6 +8,9 @@ function App() {
         <Route path="/s/g/:backgroundId/:language?">
           <GoodLuck />
         </Route>
+        <Route path="/services/good-luck/:backgroundId/:language?">
+          <GoodLuck />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
