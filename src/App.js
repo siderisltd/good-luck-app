@@ -5,7 +5,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/services/good-luck/:backgroundId/:language?">
+        <Route path="/s/g/:backgroundId/:language?">
           <GoodLuck />
         </Route>
       </Switch>
