@@ -15,10 +15,10 @@ export default function GoodLuck() {
         language = "en";
     }).finally(() => {
       language = language || "en";
-      window.location.href = `${baseAddress}/${language.toLowerCase()}/services/good-luck?t=p1ckd1yl7L5ck4m3&b=${backgroundId}`;
+      window.location.href = `${baseAddress}/${language.toLowerCase()}/services/good-luck?t=p1ckd1yl7L5ck4m3&b=${backgroundId}&c=${language}`;
     });
   } else {
-    window.location.href = `${baseAddress}/${language.toLowerCase()}/services/good-luck?t=p1ckd1yl7L5ck4m3&b=${backgroundId}`;
+    window.location.href = `${baseAddress}/en/services/good-luck?t=p1ckd1yl7L5ck4m3&b=${backgroundId}&c=en`;
   }
 
   return <h1></h1>;
