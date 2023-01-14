@@ -1,10 +1,10 @@
 import React from 'react';
-import { withRouter } from "react-router";
 import axios from 'axios';
+import Header from './Header';
+import Footer from './Footer';
 
 
-
-class GoodLuckComponent extends React.Component {
+class GoodLuck extends React.Component {
   componentDidMount() {
     this.defaultLanguage = 'en';
 
@@ -84,14 +84,20 @@ class GoodLuckComponent extends React.Component {
     if (!this.state.quote) {
       return null;
     }
+    
 
-    return <div>
-      <h1>Quote: {this.quote.text} | Background: {this.backgroundId}</h1>
-    </div>
+    return (
+      <>
+        <Header />
+        <div>
+          <h1>Quote: {this.quote.text} | Background: {this.backgroundId}</h1>
+        </div>
+        <Footer />
+      </>)
   }
 }
 
-export default GoodLuckComponent;
+export default GoodLuck;
 
 var QuotesCache = {
   "bg": [{
