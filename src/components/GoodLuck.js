@@ -88,9 +88,9 @@ class GoodLuck extends React.Component {
 
     return (
       <>
-        <Header />
+        <Header backgroundId={this.backgroundId} />
         <div>
-          <h1>Quote: {this.quote.text} | Background: {this.backgroundId}</h1>
+          <h1 style={QuoteStyle}>{this.quote.text}</h1>
         </div>
         <Footer />
       </>)
@@ -98,6 +98,13 @@ class GoodLuck extends React.Component {
 }
 
 export default GoodLuck;
+
+const QuoteStyle = {
+  paddingTop: '30px',
+  paddingBottom: '30px',
+  textAlign: 'center',
+  whiteSpace: 'pre-line'
+}
 
 var QuotesCache = {
   "bg": [{

@@ -1,11 +1,20 @@
 import React from 'react'
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div>
-      <h1>Header</h1>
+    <div style={HeaderBackground(props.backgroundId)}>
     </div>
   )
 }
 
 export default Header
+
+const HeaderBackground = (backgroundId) => ({ 
+    backgroundImage: `url("/background-${backgroundId}.png")`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    color: 'red',
+    minHeight: '400px',
+    minWidth: '100%',
+})
