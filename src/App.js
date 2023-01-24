@@ -1,5 +1,7 @@
 import GoodLuck from './components/GoodLuck';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import FontAwesome from "./components/FontAwesome/FontAwesome";
+FontAwesome();
 
 function App() {
   return (

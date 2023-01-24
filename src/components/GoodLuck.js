@@ -1,7 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './Header/Header';
+import Share from './Share/Share';
+import Footer from './Footer/Footer';
+import { ThemeContainer } from './QuoteContainer/ThemeContainer/ThemeContainer.styles';
+import { QuoteText } from './QuoteContainer/QuoteText/QuoteText.styles';
+import { ThemeText } from './QuoteContainer/ThemeText/ThemeText.styles';
+import { HeadingShape } from './QuoteContainer/HeadingShape/HeadingShape.styles';
+import { Container, Body } from './Container/Container.styles';
 
 
 class GoodLuck extends React.Component {
@@ -88,23 +94,26 @@ class GoodLuck extends React.Component {
 
     return (
       <>
-        <Header backgroundId={this.backgroundId} />
-        <div>
-          <h1 style={QuoteStyle}>{this.quote.text}</h1>
-        </div>
-        <Footer />
+        <Body>
+          <Header backgroundId={this.backgroundId} />
+          <Container margin='85px 0 50px 0'>
+            <ThemeContainer className="theme-heading">
+              <ThemeText><HeadingShape>дневен късмет</HeadingShape></ThemeText>
+            </ThemeContainer>
+            <Container>
+              <QuoteText>{this.quote.text}</QuoteText>
+            </Container>
+            <Share />
+          </Container>
+          <Footer />
+        </Body>
       </>)
   }
 }
 
-export default GoodLuck;
 
-const QuoteStyle = {
-  paddingTop: '30px',
-  paddingBottom: '30px',
-  textAlign: 'center',
-  whiteSpace: 'pre-line'
-}
+
+export default GoodLuck;
 
 var QuotesCache = {
   "bg": [{
