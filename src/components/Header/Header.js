@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
 import logo from '../../assets/logo.png';
+import { Link } from '../Link/Link.style';
 
 const Header = (props) => {
   return (
-    <div>
+    <React.Fragment>
       <div style={Navigation} className="header-navigation" >
-        <img src={logo} style={Logo}/>
+        <Link href='https://qphotography.eu' target='_blank' userSelect='none'><img src={logo} style={Logo} /></Link>
       </div>
       <div style={HeaderBackground(props.backgroundId)}>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 
@@ -19,7 +20,7 @@ const Logo = {
   maxWidth: '100%',
   verticalAlign: 'middle',
   maxHeight: '27px',
-  margin: '1em'
+  margin: '1em',
 }
 
 const Navigation = {

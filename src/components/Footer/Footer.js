@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div>
       <FooterBox className='footer-box'>
-        <Container padding='0 15px' className='footer-sec'>
+        <Container className='footer-sec' width='auto' margin='0 15px'>
           <span class="footer-logo">
             <img class="site_logo" style={LogoStyle} alt="Q-Photography Logo" src={logo}/>
           </span>

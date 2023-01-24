@@ -96,14 +96,14 @@ class GoodLuck extends React.Component {
       <>
         <Body>
           <Header backgroundId={this.backgroundId} />
-          <Container margin='85px 0 50px 0'>
+          <Container margin='85px 0 90px 0'>
             <ThemeContainer className="theme-heading">
               <ThemeText><HeadingShape>дневен късмет</HeadingShape></ThemeText>
             </ThemeContainer>
             <Container>
               <QuoteText>{this.quote.text}</QuoteText>
             </Container>
-            <Share />
+            { /*<Share />*/ }
           </Container>
           <Footer />
         </Body>
