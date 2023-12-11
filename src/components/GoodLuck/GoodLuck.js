@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default function GoodLuck() {
   let { language, backgroundId } = useParams();
-  let baseAddress = 'https://qphotography.eu';
+  let baseAddress = 'https://qphotographyclient.azurewebsites.net';
 
   if (!language) {
     axios.get('https://ipapi.co/json/').then((response) => {
